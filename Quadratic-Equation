@@ -1,0 +1,46 @@
+Question:
+ 	Write a Program in C# to find the roots of Quadratic Equation.
+  
+Code:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace program2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c;
+            double x, y, d;
+            Console.WriteLine("\n Enter a ,b and c : ");
+            a = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
+            c = Convert.ToInt32(Console.ReadLine());
+            d = b * b - (4 * a * c);
+            if (d == 0)
+            {
+                Console.WriteLine("\n The roots are equal");
+                x = (-b) / 2 * a;
+                y = x;
+                Console.WriteLine("\nThe first square = {0}\n", x);
+                Console.WriteLine("\nThe second square = {0}\n", y);
+            }
+            else if (d > 0)
+            {
+                Console.WriteLine("Both roots are real and different \n");
+                x = (-b + (Math.Sqrt(d))) / 2 * a;
+                y = (-b - (Math.Sqrt(d))) / 2 * a;
+                Console.WriteLine("\n The first square = {0}\n", x);
+                Console.WriteLine("\n The second square = {0}\n", y);
+            }
+            else
+            { Console.WriteLine("\nThe Roots are imaginery "); }
+            Console.ReadLine();
+
+        }
+    }
+}
